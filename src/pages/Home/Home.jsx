@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../images/logo.svg";
+import ilustration from "../../images/illustration-working.svg";
 import styles from "./Home.module.scss";
 import {
   AiFillFacebook,
@@ -11,20 +12,38 @@ import { BsPinterest } from "react-icons/bs";
 const Home = () => {
   return (
     <>
-      <nav>
-        <div className={styles.left}>
-          <img src={logo} alt="logo" />
-          <ul>
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>Resources</li>
-          </ul>
-        </div>
-        <div className={styles.right}>
-          <button className={styles.login}>Login</button>
-          <button className={styles.signup}>Signup</button>
-        </div>
-      </nav>
+      <div className={styles.home_container}>
+        <nav>
+          <div className={styles.left}>
+            <img src={logo} alt="logo" />
+            <ul>
+              <li>Features</li>
+              <li>Pricing</li>
+              <li>Resources</li>
+            </ul>
+          </div>
+          <div className={styles.right}>
+            <button className={styles.login}>Login</button>
+            <button className={styles.signup}>Signup</button>
+          </div>
+        </nav>
+
+        <section className={styles.content}>
+          <section className={styles.jumbotron}>
+            <div className={styles.text_title}>
+              <h1>More than just shorter links</h1>
+              <p>
+                Build your brand's recognition and get detailed insights on how
+                your links are performing
+              </p>
+              <button className={styles.btn_started}>Get Started</button>
+            </div>
+            <div className={styles.img_illustration}>
+              <img src={ilustration} alt="illustration" />
+            </div>
+          </section>
+        </section>
+      </div>
 
       <footer>
         <div className={styles.container}>
